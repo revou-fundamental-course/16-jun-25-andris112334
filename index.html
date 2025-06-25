@@ -1,13 +1,62 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Test</title>
-        <link rel="icon" type="image/x-icon" href="https://cdn-icons-png.flaticon.com/512/575/575927.png">
-    </head>
-    <head><link rel="stylesheet" type="text/css" href="style.css">
-    </head>
-    <body>
-        <h1>Hello Word !</h1>
-        <p>Andris ganteng sekali</p>
-    </body>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kalkulator Segitiga</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <div class="container">
+    <h2 class="welcome-title">Welcome to Katik</h2>
+    <p class="subtitle">
+      Selamat datang! Silakan pilih menu di bawah ini untuk menghitung luas atau keliling segitiga.
+    </p>
+    <div class="nav">
+      <button onclick="showLuas()">Luas Segitiga</button>
+      <button onclick="showKeliling()">Keliling Segitiga</button>
+    </div>
+
+    <!-- Luas Section -->
+    <div id="luasSection" class="card">
+      <div class="card-header">Luas Segitiga</div>
+      <img src="luassegitiga.jpg" alt="Segitiga" class="triangle-img">
+      <p class="rumus">Rumus Luas Segitiga yaitu: <strong>L = 1/2 × a × t</strong></p>
+      <ul>
+        <li>L = Luas</li>
+        <li>a = Alas</li>
+        <li>t = Tinggi</li>
+      </ul>
+      <div class="form-group">
+        <input type="number" id="alas" placeholder="Nilai Alas" />
+        <input type="number" id="tinggi" placeholder="Nilai Tinggi" />
+        <button class="btn-primary" onclick="hitungLuas()">Hitung</button>
+        <button class="btn-secondary" onclick="resetLuas()">Reset</button>
+      </div>
+      <p id="luasHasil"></p>
+    </div>
+
+    <!-- Keliling Section -->
+    <div id="kelilingSection" class="card hidden">
+      <div class="card-header">Keliling Segitiga</div>
+      <img src="kelilingsegitiga.jpg" alt="Segitiga" class="triangle-img">
+      <p class="rumus">Rumus Keliling Segitiga yaitu: <strong>K = S1 + S2 + S3</strong></p>
+      <ul>
+        <li>K = Keliling</li>
+        <li>S1, S2, S3 = panjang sisi segitiga</li>
+      </ul>
+      <div class="form-group">
+        <input type="number" id="sisi1" placeholder="Sisi 1" />
+        <input type="number" id="sisi2" placeholder="Sisi 2" />
+        <input type="number" id="sisi3" placeholder="Sisi 3" />
+        <button class="btn-primary" onclick="hitungKeliling()">Hitung</button>
+        <button class="btn-secondary" onclick="resetKeliling()">Reset</button>
+      </div>
+      <p id="kelilingHasil"></p>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
 </html>
